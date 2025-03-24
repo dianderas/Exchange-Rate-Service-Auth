@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: exchange-service
+
+  r2dbc:
+    url: r2dbc:postgresql://exchange-db:5432/exchangeDb
+    username: root
+    password: userpass
+
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://exchange-db:5432/exchangeDb
+    user: root
+    password: userpass

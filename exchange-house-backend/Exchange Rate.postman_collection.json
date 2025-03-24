@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "3a6d5a22-6c5e-4469-9a46-553baa4f9ecc",
+		"name": "Exchange Rate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2652788",
+		"_collection_link": "https://galactic-moon-990369.postman.co/workspace/Exchange-House~313f624f-66ce-4ebe-80d6-dfb48e30dd90/collection/2652788-3a6d5a22-6c5e-4469-9a46-553baa4f9ecc?action=share&source=collection_link&creator=2652788"
+	},
+	"item": [
+		{
+			"name": "Create Exchange Rate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJraWQiOiI0OTg0Zjg0Ni1iMmE5LTQ5NDItODcyMi03ZDg5NjBiZmJkNWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXVkIjoiZnJvbnRlbmQtY2xpZW50IiwibmJmIjoxNzQyNzA1MDY4LCJzY29wZSI6WyJyZWFkIiwib3BlbmlkIiwicHJvZmlsZSIsIndyaXRlIl0sInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwMDAiLCJleHAiOjE3NDI3MDUzNjgsImlhdCI6MTc0MjcwNTA2OCwianRpIjoiNTliMDI5MzEtNGExMi00ZWU3LThmNjYtMjhiNGI2NDExMzU2In0.bmSs2Nq2tnuWWJ54gjHypyUsiBCyLy6rWJQNafCw_3fwfJe3n7Th7c0TybNlNqsZnN8dFsyiDJ2O6-rrmtiJSX8sv1lyLHlxdcRDNxTV0LdUmfz_fKFc1AFg_0ifWwpf_c9Z3eSEAl4o5iMq2S8vksLzH91SOElAEwC1iKJ5s18KrBgNoAin05mgmalfdOT_L31Pql1lT0KJr3BsGVf-xQDpx_yIn3nQmsIiGLvVlmam12tDFPP2ATTs2z1ez1hzQuSnErN7Lw3VKVzAxK1N1MUCFF3lLoIKn2v0JNSvuMd62A4xeiACpzQUPQVdq1C9zWD_lweTP9ImyixKGYINeQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceCurrency\": \"EUR\",\r\n    \"targetCurrency\": \"PEN\",\r\n    \"fxRateBuy\": \"4.01\",\r\n    \"fxRateSell\": \"4.20\",\r\n    \"durationMinutes\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/exchange-rates",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exchange-rates"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 USD/PEN Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJraWQiOiI0OTg0Zjg0Ni1iMmE5LTQ5NDItODcyMi03ZDg5NjBiZmJkNWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXVkIjoiZnJvbnRlbmQtY2xpZW50IiwibmJmIjoxNzQyNzA1MDY4LCJzY29wZSI6WyJyZWFkIiwib3BlbmlkIiwicHJvZmlsZSIsIndyaXRlIl0sInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwMDAiLCJleHAiOjE3NDI3MDUzNjgsImlhdCI6MTc0MjcwNTA2OCwianRpIjoiNTliMDI5MzEtNGExMi00ZWU3LThmNjYtMjhiNGI2NDExMzU2In0.bmSs2Nq2tnuWWJ54gjHypyUsiBCyLy6rWJQNafCw_3fwfJe3n7Th7c0TybNlNqsZnN8dFsyiDJ2O6-rrmtiJSX8sv1lyLHlxdcRDNxTV0LdUmfz_fKFc1AFg_0ifWwpf_c9Z3eSEAl4o5iMq2S8vksLzH91SOElAEwC1iKJ5s18KrBgNoAin05mgmalfdOT_L31Pql1lT0KJr3BsGVf-xQDpx_yIn3nQmsIiGLvVlmam12tDFPP2ATTs2z1ez1hzQuSnErN7Lw3VKVzAxK1N1MUCFF3lLoIKn2v0JNSvuMd62A4xeiACpzQUPQVdq1C9zWD_lweTP9ImyixKGYINeQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sourceCurrency\": \"USD\",\r\n    \"targetCurrency\": \"PEN\",\r\n    \"fxRateBuy\": \"3.65\",\r\n    \"fxRateSell\": \"3.80\",\r\n    \"durationMinutes\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/exchange-rates",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"exchange-rates"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "201 PEN/USD Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJraWQiOiI0OTg0Zjg0Ni1iMmE5LTQ5NDItODcyMi03ZDg5NjBiZmJkNWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXVkIjoiZnJvbnRlbmQtY2xpZW50IiwibmJmIjoxNzQyNzA1MDY4LCJzY29wZSI6WyJyZWFkIiwib3BlbmlkIiwicHJvZmlsZSIsIndyaXRlIl0sInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwMDAiLCJleHAiOjE3NDI3MDUzNjgsImlhdCI6MTc0MjcwNTA2OCwianRpIjoiNTliMDI5MzEtNGExMi00ZWU3LThmNjYtMjhiNGI2NDExMzU2In0.bmSs2Nq2tnuWWJ54gjHypyUsiBCyLy6rWJQNafCw_3fwfJe3n7Th7c0TybNlNqsZnN8dFsyiDJ2O6-rrmtiJSX8sv1lyLHlxdcRDNxTV0LdUmfz_fKFc1AFg_0ifWwpf_c9Z3eSEAl4o5iMq2S8vksLzH91SOElAEwC1iKJ5s18KrBgNoAin05mgmalfdOT_L31Pql1lT0KJr3BsGVf-xQDpx_yIn3nQmsIiGLvVlmam12tDFPP2ATTs2z1ez1hzQuSnErN7Lw3VKVzAxK1N1MUCFF3lLoIKn2v0JNSvuMd62A4xeiACpzQUPQVdq1C9zWD_lweTP9ImyixKGYINeQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sourceCurrency\": \"PEN\",\r\n    \"targetCurrency\": \"USD\",\r\n    \"fxRateBuy\": \"0.28\",\r\n    \"fxRateSell\": \"0.29\",\r\n    \"durationMinutes\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/exchange-rates",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"exchange-rates"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "201 EUR/PEN Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJraWQiOiI0OTg0Zjg0Ni1iMmE5LTQ5NDItODcyMi03ZDg5NjBiZmJkNWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXVkIjoiZnJvbnRlbmQtY2xpZW50IiwibmJmIjoxNzQyNzA1MDY4LCJzY29wZSI6WyJyZWFkIiwib3BlbmlkIiwicHJvZmlsZSIsIndyaXRlIl0sInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwMDAiLCJleHAiOjE3NDI3MDUzNjgsImlhdCI6MTc0MjcwNTA2OCwianRpIjoiNTliMDI5MzEtNGExMi00ZWU3LThmNjYtMjhiNGI2NDExMzU2In0.bmSs2Nq2tnuWWJ54gjHypyUsiBCyLy6rWJQNafCw_3fwfJe3n7Th7c0TybNlNqsZnN8dFsyiDJ2O6-rrmtiJSX8sv1lyLHlxdcRDNxTV0LdUmfz_fKFc1AFg_0ifWwpf_c9Z3eSEAl4o5iMq2S8vksLzH91SOElAEwC1iKJ5s18KrBgNoAin05mgmalfdOT_L31Pql1lT0KJr3BsGVf-xQDpx_yIn3nQmsIiGLvVlmam12tDFPP2ATTs2z1ez1hzQuSnErN7Lw3VKVzAxK1N1MUCFF3lLoIKn2v0JNSvuMd62A4xeiACpzQUPQVdq1C9zWD_lweTP9ImyixKGYINeQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sourceCurrency\": \"EUR\",\r\n    \"targetCurrency\": \"PEN\",\r\n    \"fxRateBuy\": \"4.01\",\r\n    \"fxRateSell\": \"4.20\",\r\n    \"durationMinutes\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/exchange-rates",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"exchange-rates"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "400 Bad Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJraWQiOiI0OTg0Zjg0Ni1iMmE5LTQ5NDItODcyMi03ZDg5NjBiZmJkNWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXVkIjoiZnJvbnRlbmQtY2xpZW50IiwibmJmIjoxNzQyNzA1MDY4LCJzY29wZSI6WyJyZWFkIiwib3BlbmlkIiwicHJvZmlsZSIsIndyaXRlIl0sInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwMDAiLCJleHAiOjE3NDI3MDUzNjgsImlhdCI6MTc0MjcwNTA2OCwianRpIjoiNTliMDI5MzEtNGExMi00ZWU3LThmNjYtMjhiNGI2NDExMzU2In0.bmSs2Nq2tnuWWJ54gjHypyUsiBCyLy6rWJQNafCw_3fwfJe3n7Th7c0TybNlNqsZnN8dFsyiDJ2O6-rrmtiJSX8sv1lyLHlxdcRDNxTV0LdUmfz_fKFc1AFg_0ifWwpf_c9Z3eSEAl4o5iMq2S8vksLzH91SOElAEwC1iKJ5s18KrBgNoAin05mgmalfdOT_L31Pql1lT0KJr3BsGVf-xQDpx_yIn3nQmsIiGLvVlmam12tDFPP2ATTs2z1ez1hzQuSnErN7Lw3VKVzAxK1N1MUCFF3lLoIKn2v0JNSvuMd62A4xeiACpzQUPQVdq1C9zWD_lweTP9ImyixKGYINeQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sourceCurrency\": \"BOL\",\r\n    \"targetCurrency\": \"PEN\",\r\n    \"fxRateBuy\": \"3.65\",\r\n    \"fxRateSell\": \"3.80\",\r\n    \"durationMinutes\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/exchange-rates",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"exchange-rates"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "130"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2025-03-23T19:28:59.491857926Z\",\n    \"message\": \"Invalid currency code: BOL\",\n    \"error\": \"Bad Request\",\n    \"status\": \"BAD_REQUEST\"\n}"
+				},
+				{
+					"name": "500 Server Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJraWQiOiI0OTg0Zjg0Ni1iMmE5LTQ5NDItODcyMi03ZDg5NjBiZmJkNWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXVkIjoiZnJvbnRlbmQtY2xpZW50IiwibmJmIjoxNzQyNzA1MDY4LCJzY29wZSI6WyJyZWFkIiwib3BlbmlkIiwicHJvZmlsZSIsIndyaXRlIl0sInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwMDAiLCJleHAiOjE3NDI3MDUzNjgsImlhdCI6MTc0MjcwNTA2OCwianRpIjoiNTliMDI5MzEtNGExMi00ZWU3LThmNjYtMjhiNGI2NDExMzU2In0.bmSs2Nq2tnuWWJ54gjHypyUsiBCyLy6rWJQNafCw_3fwfJe3n7Th7c0TybNlNqsZnN8dFsyiDJ2O6-rrmtiJSX8sv1lyLHlxdcRDNxTV0LdUmfz_fKFc1AFg_0ifWwpf_c9Z3eSEAl4o5iMq2S8vksLzH91SOElAEwC1iKJ5s18KrBgNoAin05mgmalfdOT_L31Pql1lT0KJr3BsGVf-xQDpx_yIn3nQmsIiGLvVlmam12tDFPP2ATTs2z1ez1hzQuSnErN7Lw3VKVzAxK1N1MUCFF3lLoIKn2v0JNSvuMd62A4xeiACpzQUPQVdq1C9zWD_lweTP9ImyixKGYINeQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sourceCurrency\": \"BOL\",\r\n    \"targetCurrency\": \"PEN\",\r\n    \"fxRateBuy\": \"-1\",\r\n    \"fxRateSell\": \"3.80\",\r\n    \"durationMinutes\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/exchange-rates",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"exchange-rates"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "132"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Internal Server Error\",\n    \"status\": 500,\n    \"timestamp\": \"2025-03-23T19:32:40.024652974Z\",\n    \"message\": \"An unexpected error occurred\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Exchange Rate",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/exchange-rates/EUR/PEN",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exchange-rates",
+						"EUR",
+						"PEN"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 USD/PEN Get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/exchange-rates/USD/PEN",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"exchange-rates",
+								"USD",
+								"PEN"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fxRateBuy\": 3.65,\n    \"fxRateSell\": 3.8,\n    \"sourceCurrency\": \"USD\",\n    \"targetCurrency\": \"PEN\",\n    \"validUntil\": 1742765941\n}"
+				},
+				{
+					"name": "200 PEN/USD Get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/exchange-rates/PEN/USD",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"exchange-rates",
+								"PEN",
+								"USD"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fxRateBuy\": 0.28,\n    \"fxRateSell\": 0.29,\n    \"sourceCurrency\": \"PEN\",\n    \"targetCurrency\": \"USD\",\n    \"validUntil\": 1742765753\n}"
+				},
+				{
+					"name": "200 EUR/PEN Get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/exchange-rates/EUR/PEN",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"exchange-rates",
+								"EUR",
+								"PEN"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fxRateBuy\": 4.01,\n    \"fxRateSell\": 4.2,\n    \"sourceCurrency\": \"EUR\",\n    \"targetCurrency\": \"PEN\",\n    \"validUntil\": 1742765765\n}"
+				},
+				{
+					"name": "404 PEN/ERU Not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/exchange-rates/PEN/EUR",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"exchange-rates",
+								"PEN",
+								"EUR"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "115"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Not Found\",\n    \"status\": 404,\n    \"timestamp\": \"2025-03-23T21:40:50.417876952Z\",\n    \"message\": \"Exchange rate not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Transaction",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"AAA\",\r\n    \"amount\": \"100\",\r\n    \"sourceCurrency\": \"USD\",\r\n    \"targetCurrency\": \"PEN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 BUY Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"BUY\",\r\n    \"amount\": \"100\",\r\n    \"sourceCurrency\": \"USD\",\r\n    \"targetCurrency\": \"PEN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/transactions",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amountTarget\": 365,\n    \"targetCurrency\": \"PEN\",\n    \"type\": \"BUY\"\n}"
+				},
+				{
+					"name": "201 SELL Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"SELL\",\r\n    \"amount\": \"100\",\r\n    \"sourceCurrency\": \"USD\",\r\n    \"targetCurrency\": \"PEN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/transactions",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amountTarget\": 380,\n    \"targetCurrency\": \"PEN\",\n    \"type\": \"SELL\"\n}"
+				},
+				{
+					"name": "400 Bad Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"AAA\",\r\n    \"amount\": \"100\",\r\n    \"sourceCurrency\": \"USD\",\r\n    \"targetCurrency\": \"PEN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/transactions",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "138"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Bad Request\",\n    \"status\": \"BAD_REQUEST\",\n    \"timestamp\": \"2025-03-23T21:47:55.659758160Z\",\n    \"message\": \"Invalid transaction type code: AAA\"\n}"
+				}
+			]
+		}
+	]
+}

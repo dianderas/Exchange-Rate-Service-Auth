@@ -1,0 +1,71 @@
+version: "3.8"
+services:
+  # Base de datos para Exchange Service
+  exchange-db:
+    image: postgres:15
+    container_name: exchange-db
+    restart: always
+    environment:
+      POSTGRES_DB: exchangeDb
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: userpass
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U root -d exchangeDb" ]
+      interval: 10s
+      retries: 5
+      timeout: 5s
+    networks:
+      - my_network
+
+  # Authorization Server
+  authorization-server:
+    build:
+      context: .
+      dockerfile: authorization-service/Dockerfile
+    container_name: authorization-server
+    environment:
+      SPRING_SECURITY_OAUTH2_AUTHORIZATIONSERVER_ISSUER: http://authorization-server:9000
+    ports:
+      - "9000:9000"
+    networks:
+      - my_network
+
+  # API Gateway
+  gateway-service:
+    build:
+      context: .
+      dockerfile: gateway-service/Dockerfile
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - authorization-server
+      - exchange-service
+    environment:
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://authorization-server:9000
+    networks:
+      - my_network
+
+  # Exchange Service
+  exchange-service:
+    build:
+      context: .
+      dockerfile: exchange-service/Dockerfile
+    container_name: exchange-service
+    depends_on:
+      exchange-db:
+        condition: service_healthy
+    environment:
+      SPRING_R2DBC_URL: r2dbc:postgresql://exchange-db:5432/exchangeDb
+      SPRING_R2DBC_USERNAME: root
+      SPRING_R2DBC_PASSWORD: userpass
+    ports:
+      - "8081:8081"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

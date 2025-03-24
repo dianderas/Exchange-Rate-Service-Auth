@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5173:80' # Exponer el puerto 5173 para acceder al frontend
+    environment:
+      - VITE_AUTHORIZATION_ENDPOINT=http://localhost:9000/oauth2/authorize
+      - VITE_TOKEN_ENDPOINT=http://localhost:9000/oauth2/token
+      - VITE_REDIRECT_URI=http://127.0.0.1:5173/callback
+      - VITE_API_GATEWAY_SERVICE_ENDPOINT=http://localhost:8080
