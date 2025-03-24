@@ -21,7 +21,7 @@ Sigue los pasos a continuación para levantar el sistema completo:
 
 1. **Clona el repositorio** en tu máquina local:
    ```bash
-   git clone https://github.com/tu-repo/exchange-house.git
+   git clone https://github.com/dianderas/Exchange-Rate-Service-Auth.git
    cd exchange-house
    ```
 2. **Levantar el backend**: Navega a la carpeta del backend:
@@ -55,4 +55,4 @@ Sigue los pasos a continuación para levantar el sistema completo:
 
 El repositorio contiene dos carpetas principales:
 
-- Archivo: `exchange-house.postman_collection.json`
+- Archivo: [`exchange-house.postman_collection.json`](https://github.com/dianderas/Exchange-Rate-Service-Auth/blob/main/exchange-house-backend/Exchange%20Rate.postman_collection.json)
